@@ -18,7 +18,7 @@ const contactInfo = [
 ];
 const HeaderTop = () => {
   return (
-    <div className={styles.headerTop}>
+    <div className={`d-none d-xl-block ${styles.headerTop}`}>
       <div className="container">
         <div className={styles.contactAndSocial}>
           <div className={styles.contactInfo}>
