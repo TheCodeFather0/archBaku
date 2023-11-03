@@ -11,3 +11,7 @@
   font-size: 25px;
   cursor: pointer;
 }
+
+.navigation .active {
+  color: rgba(1, 107, 56, 1);
+}

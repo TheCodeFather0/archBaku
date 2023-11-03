@@ -16,14 +16,15 @@ const contactInfo = [
   { id: 1, title: "info@archbaku.az", icon: <AiOutlineMail /> },
   { id: 1, title: "Bakı / Azərbaycan", icon: <HiLocationMarker /> },
 ];
+
 const HeaderTop = () => {
   return (
     <div className={`d-none d-xl-block ${styles.headerTop}`}>
       <div className="container">
         <div className={styles.contactAndSocial}>
           <div className={styles.contactInfo}>
-            {contactInfo.map((props) => {
-              return <HeaderTopContact {...props} />;
+            {contactInfo.map((props, index) => {
+              return <HeaderTopContact key={index} {...props} />;
             })}
           </div>
 

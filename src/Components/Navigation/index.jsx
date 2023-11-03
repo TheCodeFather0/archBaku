@@ -3,6 +3,7 @@ import { MyRoutes } from "../../MyRoutes/index";
 import { Link, NavLink } from "react-router-dom";
 import styles from "./style.module.css";
 import { FaBars } from "react-icons/fa";
+
 const Navigation = () => {
   return (
     <div className={styles.navigation}>
@@ -18,7 +19,14 @@ const Navigation = () => {
             {MyRoutes.map(({ id, path, title }) => {
               return (
                 <li key={id} className="ms-5">
-                  <NavLink to={path}>{title}</NavLink>
+                  <NavLink
+                    className={({ isActive }) =>
+                      isActive ? styles.active : null
+                    }
+                    to={path}
+                  >
+                    {title}
+                  </NavLink>
                 </li>
               );
             })}
